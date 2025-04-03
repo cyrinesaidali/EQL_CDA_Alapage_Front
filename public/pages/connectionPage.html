@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Alapage - Page d'accueil </title>
+
+    <!--JS Arch(header, footer...)-->
+    <script async src="../arch/arch.js"></script>
+    <!--Bootstap-->
+	<link rel="stylesheet" href="../resources/bootstrap/bootstrap.zephyr.min.css">
+  <link rel="stylesheet" href="../resources/css/style.css">
+
+<!-- Fichiers Javascript -->
+  <script async type="module" src="../controller/connectionController.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+	
+
+    <article class="container">
+
+      <form>
+        <div class="row d-flex mb-5 mt-5">
+            <h3>Connectez-vous : </h3>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="loginValue">Adresse email :</label>
+            <input type="email" id="loginValue" class="form-control" />
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <label class="form-label" for="passwordValue">Mot de passe : </label>
+          <input type="password" id="passwordValue" class="form-control" />
+        </div>
+      </form>
+      <button id="connectionBtn" type="button" class="btn btn-primary">Button</button>
+      
+
+    </article>
+
+    <div id="footer"></div>
+</body>
+</html>

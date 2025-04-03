@@ -1,20 +1,21 @@
-// server.js
+// Serveur ExpressJS :  Mise en place des modules néecessaires, ports, et Apps
 
-// Import required modules
+// Import des différents modules nécessaires pour faire tourner express :
 const express = require('express');
 const path = require('path');
 
-// Create an Express application
+// Création de la constante App → Va permettre de faire tourner le serveur +  permet d'envoyer les différentes pages HTML
 const app = express();
 
-// Define a route to serve the HTML file
-app.get('/', (req, res) => {
-    // Send the HTML file as the response
-    res.sendFile(path.join(__dirname, 'src/index.html'));
-});
+//DIFFÉRENTES ROUTES POUR L'APP : Mise en place des différentes routes avec les pages 
 
-// Start the server
-const PORT = process.env.PORT || 3000;
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/pages')));
+app.use(express.static(path.join(__dirname, 'public/resources')));
+app.use(express.static(path.join(__dirname, 'public/view')));
+
+// Démarrage du serveur :
+const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Le serveur tourne sur le port : ${PORT}`);
 });

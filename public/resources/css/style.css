@@ -1,0 +1,20 @@
+article { 
+    min-height: calc(105vh - 18.5rem); 
+}
+
+header { 
+    height: 4rem; 
+}
+
+footer { 
+    height: 4rem; 
+}
+
+
+.bg-blue-al {
+    background-color: #0A5FB4;
+}
+
+.text-blue-al {
+    color: #0A5FB4;
+}
