@@ -4,6 +4,9 @@
 const express = require('express');
 const path = require('path');
 
+const cors = require('cors'); // Import du middleware CORS
+
+
 // Création de la constante App → Va permettre de faire tourner le serveur +  permet d'envoyer les différentes pages HTML
 const app = express();
 
@@ -12,7 +15,11 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/pages')));
 app.use(express.static(path.join(__dirname, 'public/resources')));
-app.use(express.static(path.join(__dirname, 'public/view')));
+app.use(express.static(path.join(__dirname, 'public/arch')));
+app.use(express.static(path.join(__dirname, 'public/controller')));
+
+
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 // Démarrage du serveur :
 const PORT = 3000;

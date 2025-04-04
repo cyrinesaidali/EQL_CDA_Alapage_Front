@@ -1,8 +1,8 @@
 'use strict';
 
-const administrator =  sessionStorage.getItem("admin");
+const user =  sessionStorage.getItem("user");
 
-const navigationHtml = administrator ? "../arch/adminNavBar.html" : "../arch/guestNavBar.html"
+const navigationHtml = user ? "../arch/adminNavBar.html" : "../arch/guestNavBar.html"
 
 fetch("./arch/header.html")
     .then(response => response.text())
@@ -13,3 +13,4 @@ fetch("./arch/header.html")
 fetch("./arch/footer.html")
 .then(response => response.text())
 .then(html => document.getElementById("footer").innerHTML = html);
+
