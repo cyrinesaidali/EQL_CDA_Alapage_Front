@@ -1,13 +1,13 @@
 article { 
-    min-height: calc(110vh - rem); 
+    min-height: calc(123vh - 18rem); 
 }
 
 header { 
-    height: 4rem; 
+    height: 7rem; 
 }
 
 footer { 
-    height: 4rem; 
+    height: 5rem; 
 }
 
 
@@ -17,4 +17,9 @@ footer {
 
 .text-blue-al {
     color: #0A5FB4;
+}
+
+.nav-bar {
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
 }

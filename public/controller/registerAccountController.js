@@ -22,7 +22,7 @@ function validateRegisterUser() {
         method: "POST",
         headers: { 
             "Content-Type" : "application/json" },
-        body: JSON.stringify({
+        body: JSON({
             surnameUser: fisrtName,
             lastNameUser: lastName,
             email: emailUser,

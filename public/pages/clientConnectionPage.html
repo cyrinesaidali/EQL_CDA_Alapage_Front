@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Alapage - Livres disponibles </title>
+    
+<!-- Bootstap et fichiers CSS : -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+
+<!--JS : Arch / Controller / View -->
+<script async src="../arch/arch.js"></script>
+<script async type="module" src="../controller/connectionController.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <article class="container d-flex flex-column justify-content-center align-items-center">
+
+      <div class="text-center col-lg-9">
+          <h3 class="text-info">Renseignez vos informations pour vous connecter : </h3>
+      </div>
+
+
+      <div class=" card bg-info text-light border-light col-lg-5"> 
+        <div>
+          <form>
+            <div data-mdb-input-init class="form-outline ms-3 mx-3">
+              <label class="form-label" for="loginValue">Adresse email :</label>
+              <input type="email" id="loginValue" class="form-control" />
+            </div>
+            <div data-mdb-input-init class="form-outline ms-3 mx-3">
+              <label class="form-label" for="passwordValue">Mot de passe : </label>
+              <input type="password" id="passwordValue" class="form-control" />
+            </div>
+          </form>
+        </div>
+
+        <div class=" mb-3 mt-3  d-flex align-items-center justify-content-center">
+          
+          <button id="connectionBtn" type="button" class="btn btn-success">Connexion</button>
+          <button id="UUUUUUUUUUUUU" type="button" class="btn btn-warning">Annuler</button>
+        </div>
+      </div>
+  
+  </article>
+
+
+    <div id="footer"></div>
+</body>
+</html>

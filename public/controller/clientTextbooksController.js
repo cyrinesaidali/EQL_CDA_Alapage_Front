@@ -1,29 +1,39 @@
 import { getBackUrl } from "../controller/backUrl.js";
+import { displayAvailableTextbooks } from "../view/clientTextbookView.js"
 
 const backUrl = `${getBackUrl()}/catalog`;
-const user = JSON.parse(sessionStorage.getItem("user"));
-console.log(sessionStorage.getItem("user"));
 
-if (window.location.pathname === '/clientAllTextbooks.html') {
-    showAllItems();
-};
+const client = JSON.parse(sessionStorage.getItem("CLIENT"));
+console.log(client);
 
-function showAllItems() {
+fetchGetAvailableTextbooks();
+
+function fetchGetAvailableTextbooks() {
     fetch(`${backUrl}/displayTextbooks`, {
         method: 'GET',
         headers: {
-            "Authorization": "Bearer " + user.token,  
+            "Authorization": "Bearer " + client.token,  
             "Content-Type": "application/json"
         }
     })
-    .then(console.log(user.token))
-    .then(
-        response => {
-        console.log(response);
-        if (!response.ok) {
-            throw new Error('ERREUR');
-        }
-        return response.json();
+    .then(response => response.ok ? response.text() : Promise.reject(response)) //Permet de mettre la réponse sous forme de tableau
+    .then(response => 
+        {
+            console.log(response);
+        })
+    .then(data => {
+        console.log( "test :" + data);
+        let i = 1;
+        data.forEach(item => {
+            displayAvailableTextbooks(i, item);
+            i++
+        });
     })
-    .then(data => console.log(data))
+        .catch(response =>
+        {
+            console.error(
+            "Erreur lors de l'affichage des manuels dispos",
+            `${response.status} ${response.statusText}`);
+        });
 };
+
