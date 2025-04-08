@@ -8,32 +8,25 @@ console.log(client);
 
 fetchGetAvailableTextbooks();
 
-function fetchGetAvailableTextbooks() {
+   function fetchGetAvailableTextbooks() {
     fetch(`${backUrl}/displayTextbooks`, {
         method: 'GET',
         headers: {
-            "Authorization": "Bearer " + client.token,  
+            "Authorization": "Bearer " + client.token,
             "Content-Type": "application/json"
         }
     })
-    .then(response => response.ok ? response.text() : Promise.reject(response)) //Permet de mettre la réponse sous forme de tableau
-    .then(response => 
-        {
-            console.log(response);
-        })
-    .then(data => {
-        console.log( "test :" + data);
-        let i = 1;
-        data.forEach(item => {
-            displayAvailableTextbooks(i, item);
-            i++
+    .then(response => response.ok ? response.json() : Promise.reject(response))
+    .then(response => {
+        console.log("Réponse complète :", response);
+        response.forEach((item, index) => {
+            displayAvailableTextbooks(index + 1, item);
         });
     })
-        .catch(response =>
-        {
-            console.error(
-            "Erreur lors de l'affichage des manuels dispos",
-            `${response.status} ${response.statusText}`);
-        });
-};
+    .catch(error => {
+        console.error("Erreur lors de la récupération des manuels :", error);
+    });
+}
+
+
 
