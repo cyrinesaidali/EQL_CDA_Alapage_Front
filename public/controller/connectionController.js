@@ -24,7 +24,7 @@ function authenticate() {
     .then(dataClient => 
         {
         sessionStorage.setItem("CLIENT", dataClient)
-        window.location.href = "index.html";
+        window.location.href = "clientConsultTextbooks.html";
         console.log("Réponse JSON :", dataClient);
         })
     .catch(response =>

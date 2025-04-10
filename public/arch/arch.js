@@ -2,7 +2,7 @@
 
 const client =  sessionStorage.getItem("CLIENT");
 
-const navigationHtml = client ?  "../arch/clientNavBar.html" :   "../arch/adminNavBar.html";
+const navigationHtml = client ?  "../arch/clientConnectedNavBar.html" :   "../arch/notConnectedNavBar.html";
 
 fetch("../arch/header.html")
     .then(response => response.text())
@@ -13,16 +13,20 @@ fetch("../arch/header.html")
         .then(html => {document.getElementById("navigationBarForAll").innerHTML = html
           let userName = JSON.parse(client);
       
-          if(userName){
-            document.getElementById('idClientProfile').innerHTML = ` ${userName.lastNameUser} + ${userName.surnameUser}`
+          if(userName) {
+            document.getElementById('idClientProfile').innerHTML = `Bienvenue : ${userName.lastNameUser} ${userName.surnameUser}`
           }
         })
     }
 )
 
-
 fetch("./arch/footer.html")
 .then(response => response.text())
 .then(html => document.getElementById("footer").innerHTML = html);
 
+function disconnection() {
+  sessionStorage.setItem("CLIENT", "");
+  sessionStorage.removeItem("CLIENT")
+  window.location.href = "index.html";
 
+}

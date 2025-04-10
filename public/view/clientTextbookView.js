@@ -15,9 +15,8 @@ export function displayAvailableTextbooks(i, item) {
 
     const elementHtmlToInsert = 
         `
-        
-        <div class="col-8 align-items-center mx-0">
-            <div class="card border-info d-flex flex-column mb-3"> 
+        <div class="d-flex flex-column align-items-center">
+            <div class="card ali border-info mb-3 col-8"> 
                 <div class="card-header bg-primary text-light">
                     <h5 class="mt-2 fw-bold">${item.titleTextbook}</h5>
                 </div>
@@ -59,7 +58,7 @@ export function displayAvailableTextbooks(i, item) {
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <div class="col-6 offset-md-2 col-md-4 offset-xl-3 col-xl-3">
-                            <button type="button" class="btn btn-lg btn-primary fw-bold rounded-4 disabled" value="${item.priceTextbook}"></button>
+                            <button type="button" class="btn btn-lg btn-primary fw-bold rounded-4 disabled">${item.priceTextbook} € </button>
                         </div>
                         <div class="col-6 col-md-4 col-xl-3 mb-3">
                             <span class="badge bg-success rounded-pill">☼ Disponible</span>
