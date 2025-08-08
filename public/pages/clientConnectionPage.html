@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Alapage - Livres disponibles </title>
+    <title>Client - Page de connexion</title>
     
 <!-- Bootstap et fichiers CSS : -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/zephyr/bootstrap.min.css">
     <link rel="stylesheet" href="../resources/css/style.css">
 
+    
 <!--JS : Arch / Controller / View -->
 <script async src="../arch/arch.js"></script>
 <script async type="module" src="../controller/connectionController.js"></script>
@@ -20,29 +21,29 @@
 
     <article class="container d-flex flex-column justify-content-center align-items-center">
 
-      <div class="text-center col-lg-9">
-          <h3 class="text-info">Renseignez vos informations pour vous connecter : </h3>
+      <div class="text-center col-lg-9 mb-3">
+          <h3 class="text-info">Alapage - Page de connexion</h3>
       </div>
 
 
-      <div class=" card bg-light text-light border-light col-lg-5 rounded-3"> 
+      <div class=" card bg-light border-light col-lg-5 rounded-3"> 
         <div>
           <form>
             <div data-mdb-input-init class="form-outline ms-3 mx-3">
-              <label class="form-label" for="loginValue">Adresse email :</label>
-              <input type="email" id="loginValue" class="form-control" />
+              <label class="form-label text-primary fw-bold" for="loginValue">Login :</label>
+              <input type="email" id="loginValue" class="form-control"  placeholder="Indiquez votre login ici → " />
             </div>
             <div data-mdb-input-init class="form-outline ms-3 mx-3">
-              <label class="form-label" for="passwordValue">Mot de passe : </label>
-              <input type="password" id="passwordValue" class="form-control" />
+              <label class="text-primary fw-bold" for="passwordValue">Mot de passe : </label>
+              <input type="password" id="passwordValue" class="form-control" placeholder="Indiquez votre mot de passe ici →"  />
             </div>
           </form>
         </div>
 
-        <div class=" mb-3 mt-3  d-flex align-items-center justify-content-center">
-          <button id="connectionBtn" type="button" class="btn btn-success">Connexion</button>
-          <button id="UUUUUUUUUUUUU" type="button" class="btn btn-warning">Annuler</button>
-        </div>
+          <div class="mb-3 mt-3 d-flex align-items-center justify-content-center mx-2">
+              <button id="connectionBtn" type="button" class="btn btn-success me-3">Connexion</button>
+              <button id="UUUUUUUUUUUUU" type="button" class="btn btn-warning">Annuler</button>
+            </div>
       </div>
   
   </article>

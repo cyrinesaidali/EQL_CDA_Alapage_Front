@@ -22,9 +22,6 @@ export function displayAvailableTextbooks(i, item) {
                 </div>
                 
                 <div class="card-body">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <img src="${item.picture}" alt="pictureBook" style="max-height: 50px;"/>
-                    </div>
 
                     <div class="row">
                         <div class="col-6 offset-md-2 col-md-4 offset-xl-3 col-xl-3">

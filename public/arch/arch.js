@@ -20,13 +20,11 @@ fetch("../arch/header.html")
     }
 )
 
-fetch("./arch/footer.html")
-.then(response => response.text())
-.then(html => document.getElementById("footer").innerHTML = html);
+fetch("../arch/footer.html")
+    .then(response => response.text())
+    .then(html => document.getElementById("footer").innerHTML = html);
 
 function disconnection() {
-  sessionStorage.setItem("CLIENT", "");
+  sessionStorage.setItem("CLIENT", "true");
   sessionStorage.removeItem("CLIENT")
-  window.location.href = "index.html";
-
 }
