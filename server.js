@@ -10,7 +10,7 @@ const cors = require('cors'); // Import du middleware CORS
 // Création de la constante App → Va permettre de faire tourner le serveur +  permet d'envoyer les différentes pages HTML
 const app = express();
 
-//DIFFÉRENTES ROUTES POUR L'APP : Mise en place des différentes routes avec les pages Tetststststststs 
+//DIFFÉRENTES ROUTES POUR L'APP : Mise en place des différentes routes avec les pages 
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/pages')));
