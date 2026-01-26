@@ -18,3 +18,26 @@ Starts by: /api/rest
   "password": "moh"
   *Vérifier dans les sources pour le token*
   }
+
+### Login et MDP : EXEMPLE ADMIN : 
+
+AdminLibrairieAlapage
+Alapage-123-Soleil!
+
+
+### EXEMPLE 2 : 
+
+"login": MilenaKamesLogin
+"password": bonjourClient123
+
+### EXEMPLE 3 : 
+
+JChatain01
+JChatain0123
+
+### EXEMPLE 4 : 
+
+Log : Kender25
+MDP : Kender2515
+
+
