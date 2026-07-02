@@ -39,5 +39,3 @@ JChatain0123
 
 Log : Kender25
 MDP : Kender2515
-
-
